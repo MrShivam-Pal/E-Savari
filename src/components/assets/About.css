@@ -1,0 +1,55 @@
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 20px;
+    height: 100vh;
+}
+
+
+.adetails {
+    text-align: start;
+    text-overflow: clip;
+    margin-right: 10px;
+    background-color: skyblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.adetails h1 {
+    text-align: center;
+}
+
+.adetails p {
+    padding: 10px 0;
+    font-family: sans-serif;
+}
+
+.avideo {
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.avideo-video{
+    height: 30em;
+    width: 90%;
+    margin: 2rem;
+}
+
+@media screen and (max-width: 900px){
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .avideo-video{
+        height: 30em;
+        width: 90%;
+        margin: 2rem;
+    }
+}

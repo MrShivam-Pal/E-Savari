@@ -1,0 +1,104 @@
+/* Navigation Bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width:100%;
+    height: auto;
+    padding: 25px 40px 25px 50px;
+    font-size: 1.7rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.09);
+    
+}
+
+nav h3{
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    gap:5rem;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #2D2E32;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.23s;
+}
+
+nav ul li a:hover{
+    color: #147efb;
+}
+
+nav .menu-btns{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+nav .menu-btns i:hover{
+    color: #147efb;
+}
+
+nav .menu-btns .menu-btn{
+    font-size: 2.3rem;
+}
+
+nav .menu-btns .close-btn{
+    display:none;
+    font-size: 3.3rem;
+}
+
+/* 1em = 16px  980px*/
+@media(max-width: 62em){
+    nav .menu-btns{
+        display:block;
+        z-index: 999;
+    }
+
+    nav ul{
+        /* display: none; */
+        background-color: #fff;
+        height: 100vh;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 300;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        font-size: 2.5rem;
+
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .active ul{
+        transform: translateX(0);
+        transition: all 0.5s linear;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .menu-btns .menu-btn{
+        display: none;
+    }
+
+    .active .menu-btns .close-btn{
+        display:block;
+    }
+
+}
